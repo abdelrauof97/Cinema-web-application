@@ -1,0 +1,10 @@
+<html>
+  <head>
+    <title>Cinema</title>
+  </head>
+  <body>
+    <pre><h2><% if current_user %><%= current_user.username %><% end %>   <a href="/movies">movies</a>   <a href="/about">About Us</a>  <% if !current_user %>  <a href="/login">Login</a>   <a href="/signup">Signup</a>   <% else %> <a href="/customers/<%= @current_user.slug %>"><% if current_user.username=="admin" %> Admin <% else %> Profile <% end %> </a>   <a href="/logout">Logout</a><% end %></h2></pre>
+    <br></br>
+    <%= yield %>
+  </body>
+</html>

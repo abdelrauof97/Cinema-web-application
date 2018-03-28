@@ -1,0 +1,12 @@
+
+
+<h2>Edit Movie</h2>
+<form method="post" action="/movies/<%= @movie.id %>">
+  
+  <p>Title: </p>
+  <input type="text" name="movie[title]" value="<%= @movie.title %>" id="title">
+  <p>Description:</p>
+  <textarea name="movie[description]" cols="40" rows="10" id="description"><%= @movie.description %></textarea>
+  <br>
+  <input type="submit" value="Edit Movie">
+</form>

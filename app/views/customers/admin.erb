@@ -1,0 +1,12 @@
+
+<h3>Hello Admin</h3>
+<br>
+<h4>these all movies with tickets</h4>
+
+<% Movie.all.each do |movie| %>
+  <h4><a href="/movies/<%= movie.id %>">Movie</a>: <%= movie.title %></h4>
+  <h4>All tickets reserved [ <%= movie.tickets.count %> ]</h4>
+  <h4><a href="/movies/<%= movie.id %>/tickets">See Customers</a></h4>
+  <br>
+  <p>----------------------------------------------------</p>
+<% end %>

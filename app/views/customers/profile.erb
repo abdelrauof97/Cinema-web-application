@@ -1,0 +1,15 @@
+
+<h3>Hello, <%= @customer.username %></h3>
+<% if @customer.movies == [] %>
+  <h4>You haven't any tickets to movies you can see our allowed movies from here!</h4>
+<% else %>
+  <h3>You have reserved the next movies</h3>
+  <br></br>
+  <% @customer.movies.each do |movie| %>
+    <h4><a href="/movies/<%= movie.id %>">Movie</a>: <%= movie.title %></h4>
+    <h5>Description: </h5><h6><%= movie.description %></h6>
+    <br>
+    <p>Price 25$</p>
+    <p>------------------------</p>
+  <% end %>
+<% end %>
