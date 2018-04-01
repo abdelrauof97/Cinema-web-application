@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+gem 'faker'
 gem 'bcrypt-ruby'
 gem 'sinatra'
 gem 'activerecord', :require => 'active_record'
